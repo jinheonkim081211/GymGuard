@@ -1,0 +1,6 @@
+__pycache__/
+*.pyc
+venv/
+alerts.log
+incidents.json
+.DS_Store
