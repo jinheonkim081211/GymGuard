@@ -1,0 +1,20 @@
+# GymGuardian / Gym Safety Monitor — Python dependencies
+# Install with:  pip install -r requirements.txt
+#
+# Core (required):
+opencv-python>=4.8.0     # webcam/video capture, drawing, display window
+# IMPORTANT: pinned! mediapipe 0.10.15+ removed the legacy `mp.solutions`
+# API this project uses. 0.10.14 is the last version that includes it.
+mediapipe==0.10.14       # lightweight on-device pose estimation (33 landmarks)
+numpy>=1.24.0            # vector math for the detection signals
+flask>=3.0.0             # local GymGuardian dashboard (status/events only)
+
+# Optional (nice-to-have; the program degrades gracefully without these):
+plyer>=2.1.0             # cross-platform desktop notifications
+
+# NOTE ON PYTHON VERSION
+# MediaPipe 0.10.14 supports Python 3.9–3.12. If `pip install mediapipe`
+# fails on a very new Python, create a 3.11/3.12 virtual environment:
+#     python3.11 -m venv venv
+#     source venv/bin/activate      (Windows: venv\Scripts\activate)
+#     pip install -r requirements.txt
